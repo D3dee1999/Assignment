@@ -47,12 +47,12 @@ def main():
                 st.sidebar.success("Logined in Successfully as {} ".format(username))
                 st.subheader("Welcome , {}".format(username))
 
-                userchoice = st.selectbox("",["Add Post","Users' Profile",])
+                userchoice = st.selectbox("",["Add Post","Users' Account list",])
                     
                 if userchoice == "Add Post":
                     st.subheader("Add Your Post")
 
-                elif userchoice == "Users' Profile":
+                elif userchoice == "Users' Account list":
                     st.subheader("User's List")
                     user_list = view_all_users()
                     db = pd.DataFrame(user_list,columns=["Username","Password"])
